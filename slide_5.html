@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #FFFFFF; color: #333333; }
+        .slide-container { 
+            width: 1280px; 
+            min-height: 720px; 
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            padding: 80px 60px;
+            display: flex;
+            flex-direction: column;
+        }
+        .red-line {
+            width: 120px;
+            height: 8px;
+            background-color: #E60012;
+            margin-bottom: 40px;
+        }
+        .main-title {
+            font-weight: 900;
+            font-size: 48px;
+            color: #1A1A1A;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+        .sub-title {
+            font-weight: 900;
+            font-size: 24px;
+            color: #E60012;
+            margin-bottom: 40px;
+            line-height: 1.4;
+        }
+        .comparison-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            flex-grow: 1;
+            gap: 40px;
+            position: relative;
+        }
+        .before-box, .after-box {
+            width: 48%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+        .before-box {
+            background-color: #F5F5F5;
+            border-top: 8px solid #666666;
+        }
+        .after-box {
+            background-color: #FFFFFF;
+            border: 4px solid #E60012;
+            border-top: 8px solid #E60012;
+        }
+        .box-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        .box-label {
+            font-weight: 900;
+            font-size: 32px;
+            letter-spacing: 0.05em;
+        }
+        .before-box .box-label {
+            color: #666666;
+        }
+        .after-box .box-label {
+            color: #E60012;
+        }
+        .box-title {
+            font-weight: 900;
+            font-size: 24px;
+            color: #1A1A1A;
+        }
+        .list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .list-icon {
+            font-size: 24px;
+            margin-top: 4px;
+        }
+        .before-box .list-icon {
+            color: #666666;
+        }
+        .after-box .list-icon {
+            color: #E60012;
+        }
+        .list-text {
+            font-weight: 400;
+            font-size: 20px;
+            color: #333333;
+            line-height: 1.6;
+        }
+        .arrow-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 48px;
+            color: #E60012;
+            background-color: #FFFFFF;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            border: 4px solid #E60012;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="red-line"></div>
+        <h1 class="main-title">ビフォアアフター① — LINEの混沌からスレッドの秩序へ</h1>
+        <h2 class="sub-title">「誰が対応した？」が消える——スレッドで対応状況が一目瞭然</h2>
+        
+        <div class="comparison-container">
+            <div class="before-box">
+                <div class="box-header">
+                    <div class="box-label">BEFORE</div>
+                    <div class="box-title">Daruma Expressの現状</div>
+                </div>
+                <div class="list-item">
+                    <div class="list-icon"><i class="fas fa-times-circle"></i></div>
+                    <div class="list-text">LINEグループに1日4,000件超のメッセージが流入</div>
+                </div>
+                <div class="list-item">
+                    <div class="list-icon"><i class="fas fa-times-circle"></i></div>
+                    <div class="list-text">トラブル報告・売上報告・勤怠連絡・雑談が同じタイムラインに混在</div>
+                </div>
+                <div class="list-item">
+                    <div class="list-icon"><i class="fas fa-times-circle"></i></div>
+                    <div class="list-text">役員のLINE未読が2万件超。重要連絡を見落とすリスクが常態化</div>
+                </div>
+                <div class="list-item">
+                    <div class="list-icon"><i class="fas fa-times-circle"></i></div>
+                    <div class="list-text">「あの件、誰か対応した？」が毎日発生</div>
+                </div>
+            </div>
+            
+            <div class="arrow-icon">
+                <i class="fas fa-arrow-right"></i>
+            </div>
+            
+            <div class="after-box">
+                <div class="box-header">
+                    <div class="box-label">AFTER</div>
+                    <div class="box-title">KOETE導入後</div>
+                </div>
+                <div class="list-item">
+                    <div class="list-icon"><i class="fas fa-check-circle"></i></div>
+                    <div class="list-text">カテゴリー別スレッド（トラブル報告 / 日報 / 改善提案 / 勤怠連絡）で情報が整理</div>
+                </div>
+                <div class="list-item">
+                    <div class="list-icon"><i class="fas fa-check-circle"></i></div>
+                    <div class="list-text">各スレッドに「未解決 / 対応中 / 完了」のステータスが表示</div>
+                </div>
+                <div class="list-item">
+                    <div class="list-icon"><i class="fas fa-check-circle"></i></div>
+                    <div class="list-text">管理者は未解決スレッドだけを確認すればよい</div>
+                </div>
+                <div class="list-item">
+                    <div class="list-icon"><i class="fas fa-check-circle"></i></div>
+                    <div class="list-text">誰がいつ確認・対応したかが記録として残る</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
