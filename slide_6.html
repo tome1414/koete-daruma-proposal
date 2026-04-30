@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #FFFFFF; color: #333333; }
+        .slide-container { 
+            width: 1280px; 
+            min-height: 720px; 
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            padding: 80px 60px;
+            display: flex;
+            flex-direction: column;
+        }
+        .red-line {
+            width: 120px;
+            height: 8px;
+            background-color: #E60012;
+            margin-bottom: 24px;
+        }
+        .main-title {
+            font-weight: 900;
+            font-size: 40px;
+            color: #1A1A1A;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+        .sub-title {
+            font-weight: 900;
+            font-size: 24px;
+            color: #E60012;
+            margin-bottom: 40px;
+            line-height: 1.4;
+        }
+        .comparison-container {
+            display: flex;
+            gap: 40px;
+            flex-grow: 1;
+        }
+        .before-col, .after-col {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .before-col {
+            background-color: #F5F5F5;
+            padding: 40px;
+            border-top: 8px solid #666666;
+        }
+        .after-col {
+            background-color: #FFFFFF;
+            padding: 40px;
+            border: 4px solid #E60012;
+            border-top: 8px solid #E60012;
+        }
+        .col-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        .col-title {
+            font-weight: 900;
+            font-size: 32px;
+        }
+        .before-col .col-title {
+            color: #666666;
+        }
+        .after-col .col-title {
+            color: #E60012;
+        }
+        .col-subtitle {
+            font-weight: 900;
+            font-size: 18px;
+            color: #1A1A1A;
+            margin-bottom: 24px;
+        }
+        .list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        .list-icon {
+            font-size: 24px;
+            margin-top: 2px;
+        }
+        .before-col .list-icon {
+            color: #666666;
+        }
+        .after-col .list-icon {
+            color: #E60012;
+        }
+        .list-text {
+            font-weight: 400;
+            font-size: 18px;
+            color: #333333;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="red-line"></div>
+        <h1 class="main-title">ビフォアアフター② — 言語の壁が消え、現場の本音が届く</h1>
+        <h2 class="sub-title">タイ語・ミャンマー語のまま報告できるから、現場の「本当の声」が上がってくる</h2>
+        
+        <div class="comparison-container">
+            <div class="before-col">
+                <div class="col-header">
+                    <div class="col-title">Before</div>
+                </div>
+                <div class="col-subtitle">Daruma Expressの現状</div>
+                <div class="list-item">
+                    <div class="list-icon"><i class="fas fa-times-circle"></i></div>
+                    <div class="list-text">タイ人スタッフが日本語で報告できず、重要な改善提案が出てこない</div>
+                </div>
+                <div class="list-item">
+                    <div class="list-icon"><i class="fas fa-times-circle"></i></div>
+                    <div class="list-text">ミャンマー人スタッフがタイ語でも日本語でも伝えられず、問題が潜在化</div>
+                </div>
+                <div class="list-item">
+                    <div class="list-icon"><i class="fas fa-times-circle"></i></div>
+                    <div class="list-text">「タイ人とミャンマー人の関係性の問題」が表面化しにくく、マネジメントが後手に回る</div>
+                </div>
+                <div class="list-item">
+                    <div class="list-icon"><i class="fas fa-times-circle"></i></div>
+                    <div class="list-text">通訳を介すとリアルタイム対応ができない</div>
+                </div>
+            </div>
+            
+            <div class="after-col">
+                <div class="col-header">
+                    <div class="col-title">After</div>
+                </div>
+                <div class="col-subtitle">KOETE導入後</div>
+                <div class="list-item">
+                    <div class="list-icon"><i class="fas fa-check-circle"></i></div>
+                    <div class="list-text">タイ語・ミャンマー語・日本語が自動翻訳で双方向に変換</div>
+                </div>
+                <div class="list-item">
+                    <div class="list-icon"><i class="fas fa-check-circle"></i></div>
+                    <div class="list-text">「今日うざい客が来た」「このカラーの商品が売れてる」などの現場の生の声が母国語で上がってくる</div>
+                </div>
+                <div class="list-item">
+                    <div class="list-icon"><i class="fas fa-check-circle"></i></div>
+                    <div class="list-text">チーム別スレッドで「タイ人チーム」「ミャンマー人チーム」を分けた運用も可能</div>
+                </div>
+                <div class="list-item">
+                    <div class="list-icon"><i class="fas fa-check-circle"></i></div>
+                    <div class="list-text">AIエージェントで「ミャンマーチームで最近上がっている話題」を即座に抽出可能</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
