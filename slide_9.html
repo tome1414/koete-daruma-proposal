@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #FFFFFF; color: #333333; }
+        .slide-container { 
+            width: 1280px; 
+            min-height: 720px; 
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            padding: 80px 40px 20px; /* keep top padding, reduce bottom */
+            display: flex;
+            flex-direction: column;
+        }
+        .red-line {
+            width: 120px;
+            height: 8px;
+            background-color: #E60012;
+            margin-bottom: 20px; /* reduced */
+        }
+        .main-title {
+            font-weight: 900;
+            font-size: 48px;
+            color: #1A1A1A;
+            line-height: 1.2;
+            margin-bottom: 12px; /* reduced */
+            letter-spacing: -0.02em;
+        }
+        .sub-title {
+            font-weight: 900;
+            font-size: 24px;
+            color: #E60012;
+            margin-bottom: 20px; /* reduced */
+            line-height: 1.4;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px; /* reduced */
+            flex-grow: 1;
+        }
+        .feature-item {
+            background-color: #F5F5F5;
+            border-top: 4px solid #1A1A1A;
+            padding: 16px; /* reduced */
+            display: flex;
+            flex-direction: column;
+        }
+        .feature-item:nth-child(7) {
+            grid-column: 2 / span 2;
+        }
+        .feature-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px; /* reduced */
+        }
+        .feature-icon {
+            font-size: 24px; /* reduced */
+            color: #E60012;
+            width: 32px; /* reduced */
+            text-align: center;
+        }
+        .feature-title {
+            font-weight: 900;
+            font-size: 18px; /* reduced */
+            color: #1A1A1A;
+        }
+        .feature-desc {
+            font-weight: 400;
+            font-size: 15px; /* reduced */
+            color: #666666;
+            line-height: 1.5; /* reduced */
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="red-line"></div>
+        <h1 class="main-title">KOETEの7つの機能</h1>
+        <h2 class="sub-title">Daruma Expressの現場に必要な機能が、すべて揃っている</h2>
+        
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-header">
+                    <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
+                    <div class="feature-title">スレッド構造</div>
+                </div>
+                <div class="feature-desc">話題ごとにスレッドを立て、情報が流れない。対応状況（未解決/完了）も一目でわかる。</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-header">
+                    <div class="feature-icon"><i class="fas fa-language"></i></div>
+                    <div class="feature-title">9言語AI翻訳</div>
+                </div>
+                <div class="feature-desc">タイ語・ミャンマー語・日本語など、母国語で入力すれば全員の言語に自動翻訳。</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-header">
+                    <div class="feature-icon"><i class="fas fa-robot"></i></div>
+                    <div class="feature-title">AIエージェント</div>
+                </div>
+                <div class="feature-desc">蓄積されたデータをAIが分析。「今月のトラブル一覧は？」と聞くだけで回答。</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-header">
+                    <div class="feature-icon"><i class="fas fa-bell"></i></div>
+                    <div class="feature-title">プッシュ通知</div>
+                </div>
+                <div class="feature-desc">重要な連絡や日報の提出漏れを、アプリが自動でリマインド。</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-header">
+                    <div class="feature-icon"><i class="fas fa-chart-pie"></i></div>
+                    <div class="feature-title">日報自動集計</div>
+                </div>
+                <div class="feature-desc">各店舗から上がってきた日報データを自動で集計し、ダッシュボード化。</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-header">
+                    <div class="feature-icon"><i class="fas fa-users"></i></div>
+                    <div class="feature-title">チーム・店舗管理</div>
+                </div>
+                <div class="feature-desc">店舗ごと、役職ごと、国籍ごとにグループを分けて情報アクセスを制御。</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-header">
+                    <div class="feature-icon"><i class="fas fa-file-alt"></i></div>
+                    <div class="feature-title">ファイル・画像共有</div>
+                </div>
+                <div class="feature-desc">現場の写真やマニュアルPDFをスレッド内に保存。後から検索も簡単。</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
