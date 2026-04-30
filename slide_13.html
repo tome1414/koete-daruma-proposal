@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #FFFFFF; color: #333333; }
+        .slide-container { 
+            width: 1280px; 
+            min-height: 720px; 
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            padding: 80px 60px;
+            display: flex;
+            flex-direction: column;
+        }
+        .red-line {
+            width: 120px;
+            height: 8px;
+            background-color: #E60012;
+            margin-bottom: 20px; /* reduced */
+        }
+        .main-title {
+            font-weight: 900;
+            font-size: 48px;
+            color: #1A1A1A;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+        .sub-title {
+            font-weight: 900;
+            font-size: 24px;
+            color: #E60012;
+            margin-bottom: 32px; /* reduced */
+            line-height: 1.4;
+        }
+        .action-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px; /* reduced */
+            flex-grow: 1;
+        }
+        .action-item {
+            background-color: #F5F5F5;
+            border-left: 8px solid #E60012;
+            padding: 18px 32px; /* reduced */
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+        .action-number {
+            font-weight: 900;
+            font-size: 48px;
+            color: #CCCCCC;
+            line-height: 1;
+        }
+        .action-content {
+            flex-grow: 1;
+        }
+        .action-title {
+            font-weight: 900;
+            font-size: 28px;
+            color: #1A1A1A;
+            margin-bottom: 8px;
+        }
+        .action-desc {
+            font-weight: 400;
+            font-size: 18px;
+            color: #666666;
+            line-height: 1.6;
+        }
+        .action-icon {
+            font-size: 48px;
+            color: #E60012;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="red-line"></div>
+        <h1 class="main-title">Next Action — 次回に向けて</h1>
+        <h2 class="sub-title">Daruma Expressの課題解決に向けて、私たちがすぐに動きます</h2>
+        
+        <div class="action-container">
+            <div class="action-item">
+                <div class="action-number">01</div>
+                <div class="action-content">
+                    <div class="action-title">デモ環境の構築（48時間以内）</div>
+                    <div class="action-desc">Daruma Express専用のKOETEデモ環境を構築し、実際の画面で機能をご確認いただける状態にします。</div>
+                </div>
+                <div class="action-icon"><i class="fas fa-laptop-code"></i></div>
+            </div>
+            
+            <div class="action-item">
+                <div class="action-number">02</div>
+                <div class="action-content">
+                    <div class="action-title">スレッド構成案の作成</div>
+                    <div class="action-desc">現在のLINEグループの運用状況をヒアリングし、最適なスレッド構成（店舗別・業務別）の初期案をご提案します。</div>
+                </div>
+                <div class="action-icon"><i class="fas fa-sitemap"></i></div>
+            </div>
+            
+            <div class="action-item">
+                <div class="action-number">03</div>
+                <div class="action-content">
+                    <div class="action-title">次回ミーティング（来週）</div>
+                    <div class="action-desc">デモ環境を触っていただきながら、具体的な運用ルールやトライアル開始に向けたスケジュールをすり合わせます。</div>
+                </div>
+                <div class="action-icon"><i class="fas fa-calendar-check"></i></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
