@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #FFFFFF; color: #333333; }
+        .slide-container { 
+            width: 1280px; 
+            min-height: 720px; 
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+        }
+        .left-col {
+            width: 60%;
+            padding: 80px 60px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+        .right-col {
+            width: 40%;
+            background-color: #1A1A1A;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px;
+        }
+        .red-line {
+            width: 120px;
+            height: 8px;
+            background-color: #E60012;
+            margin-bottom: 20px;
+        }
+        .main-title {
+            font-weight: 900;
+            font-size: 64px;
+            color: #1A1A1A;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+        .sub-title {
+            font-weight: 900;
+            font-size: 32px;
+            color: #E60012;
+            margin-bottom: 32px;
+            line-height: 1.4;
+        }
+        .caption {
+            font-weight: 400;
+            font-size: 20px;
+            color: #333333;
+            line-height: 1.6;
+            margin-bottom: auto;
+        }
+        .footer {
+            font-weight: 400;
+            font-size: 16px;
+            color: #666666;
+            margin-top: 30px;
+        }
+        .logo-container {
+            width: 220px;
+            height: 220px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .logo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 0 20px rgba(230, 0, 18, 0.3));
+        }
+        .stats-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .stat-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 12px 20px;
+            border-left: 8px solid #E60012;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .stat-icon {
+            font-size: 32px;
+            color: #E60012;
+            width: 40px;
+            text-align: center;
+        }
+        .stat-text {
+            font-weight: 900;
+            font-size: 24px;
+            color: #FFFFFF;
+            letter-spacing: 0.05em;
+        }
+        .stat-label {
+            font-weight: 400;
+            font-size: 14px;
+            color: #AAAAAA;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="left-col">
+            <div class="red-line"></div>
+            <h1 class="main-title">言葉の壁を超えて、<br>現場の声を届ける</h1>
+            <h2 class="sub-title">Daruma Express × KOETE<br>多国籍チームの報連相を、仕組みで解決する</h2>
+            <p class="caption">AIエージェント × AI翻訳 × スレッド構造で、<br>タイ・ミャンマー・日本のスタッフが<br>母国語のまま繋がる</p>
+            <div class="footer">VanNess株式会社 ｜ 2026.3 Updated</div>
+        </div>
+        <div class="right-col">
+            <div class="logo-container">
+                <img src="/home/ubuntu/koete_daruma_slides/daruma_logo_hd.png" alt="Daruma Express Logo">
+            </div>
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-robot"></i></div>
+                    <div>
+                        <div class="stat-text">Built-in</div>
+                        <div class="stat-label">AI Agent</div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-language"></i></div>
+                    <div>
+                        <div class="stat-text">9 Languages</div>
+                        <div class="stat-label">Supported</div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
+                    <div>
+                        <div class="stat-text">80%</div>
+                        <div class="stat-label">Report Rate Improvement</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
