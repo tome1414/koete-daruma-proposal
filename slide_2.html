@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #FFFFFF; color: #333333; }
+        .slide-container { 
+            width: 1280px; 
+            min-height: 720px; 
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+        }
+        .left-col {
+            width: 60%;
+            padding: 80px 60px 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+        .right-col {
+            width: 40%;
+            background-color: #1A1A1A;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px;
+        }
+        .red-line {
+            width: 120px;
+            height: 8px;
+            background-color: #E60012;
+            margin-bottom: 40px;
+        }
+        .main-title {
+            font-weight: 900;
+            font-size: 48px;
+            color: #1A1A1A;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+        .sub-title {
+            font-weight: 900;
+            font-size: 24px;
+            color: #E60012;
+            margin-bottom: 32px;
+            line-height: 1.4;
+        }
+        .content-text {
+            font-weight: 400;
+            font-size: 18px;
+            color: #333333;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .highlight-text {
+            font-weight: 900;
+            color: #E60012;
+        }
+        .phone-img {
+            width: auto;
+            height: 620px;
+            object-fit: contain;
+            display: block;
+            filter: drop-shadow(0 8px 32px rgba(0,0,0,0.6));
+        }
+        .img-caption {
+            margin-top: 12px;
+            font-size: 13px;
+            color: #888888;
+            text-align: center;
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+<body><div class="slide-container">
+        <div class="left-col">
+            <div class="red-line"></div>
+            <h1 class="main-title">Daruma Expressが抱える<br>リアルな課題</h1>
+            <h2 class="sub-title">LINE未読2万件——<br>これは「誰かが悪い」のではなく、「構造」の問題</h2>
+            <p class="content-text">
+                タイ・バンコクを中心に複数店舗を展開するDaruma Expressでは、日々の報連相をLINEに依存しています。しかし現実は、<span class="highlight-text">1日4,000件を超えるメッセージ</span>が流れ込み、役員の携帯には<span class="highlight-text">LINE未読が2万件</span>を超える状況です。重要なトラブル報告も、スタッフの改善提案も、すべてが同じタイムラインに流れ、対応済みか未対応かすら判別できません。
+            </p>
+            <p class="content-text">
+                さらに、タイ人・ミャンマー人・日本人が混在する現場では「言語の壁」が加わり、現場の本音が経営層に届かない構造的な問題が生じています。
+            </p>
+        </div>
+        <div class="right-col">
+            <img class="phone-img" src="/home/ubuntu/koete_daruma_slides/line_chaos_mockup.png" alt="LINEの混沌としたグループチャット画面" style="transform: translate(0px, 5.12726px);">
+            <div class="img-caption">実際のLINEグループ運用イメージ（未読 20,000+）</div>
+        </div>
+    </div>
+</body>
+</html>
