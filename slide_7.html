@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #FFFFFF; color: #333333; }
+        .slide-container { 
+            width: 1280px; 
+            min-height: 720px; 
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            padding: 80px 60px;
+            display: flex;
+            flex-direction: column;
+        }
+        .red-line {
+            width: 120px;
+            height: 8px;
+            background-color: #E60012;
+            margin-bottom: 24px;
+        }
+        .main-title {
+            font-weight: 900;
+            font-size: 40px;
+            color: #1A1A1A;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+        .sub-title {
+            font-weight: 900;
+            font-size: 24px;
+            color: #E60012;
+            margin-bottom: 40px;
+            line-height: 1.4;
+        }
+        .comparison-container {
+            display: flex;
+            flex-grow: 1;
+            gap: 40px;
+            position: relative;
+        }
+        .before-col, .after-col {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+        .before-col {
+            background-color: #F5F5F5;
+            border-top: 8px solid #666666;
+        }
+        .after-col {
+            background-color: #1A1A1A;
+            border-top: 8px solid #E60012;
+            color: #FFFFFF;
+        }
+        .col-title {
+            font-weight: 900;
+            font-size: 32px;
+            margin-bottom: 32px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .before-col .col-title {
+            color: #666666;
+        }
+        .after-col .col-title {
+            color: #E60012;
+        }
+        .list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .list-icon {
+            font-size: 24px;
+            margin-top: 4px;
+        }
+        .before-col .list-icon {
+            color: #666666;
+        }
+        .after-col .list-icon {
+            color: #E60012;
+        }
+        .list-text {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 1.6;
+        }
+        .before-col .list-text {
+            color: #333333;
+        }
+        .after-col .list-text {
+            color: #FFFFFF;
+        }
+        .arrow-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 48px;
+            color: #E60012;
+            background-color: #FFFFFF;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="red-line"></div>
+        <h1 class="main-title">ビフォアアフター③ — 売上・来客データが経営判断に使える情報になる</h1>
+        <h2 class="sub-title">LINEに流れていた売上データが、AIで経営判断の武器になる</h2>
+        
+        <div class="comparison-container">
+            <div class="before-col">
+                <div class="col-title">
+                    <i class="fas fa-times-circle"></i> Before (現状)
+                </div>
+                <div class="list-item">
+                    <div class="list-icon"><i class="fas fa-minus"></i></div>
+                    <div class="list-text">各店舗の売上・来客数がLINEに流れてくるが、集計・分析は手動</div>
+                </div>
+                <div class="list-item">
+                    <div class="list-icon"><i class="fas fa-minus"></i></div>
+                    <div class="list-text">「今日何人来たっけ？」が毎日発生。データが頭の中にしかない</div>
+                </div>
+                <div class="list-item">
+                    <div class="list-icon"><i class="fas fa-minus"></i></div>
+                    <div class="list-text">「このブランドが強い」という情報が担当者の記憶に属人化</div>
+                </div>
+                <div class="list-item">
+                    <div class="list-icon"><i class="fas fa-minus"></i></div>
+                    <div class="list-text">仕入れ判断・スタッフ配置が勘に頼らざるを得ない</div>
+                </div>
+            </div>
+            
+            <div class="arrow-icon">
+                <i class="fas fa-arrow-right"></i>
+            </div>
+            
+            <div class="after-col">
+                <div class="col-title">
+                    <i class="fas fa-check-circle"></i> After (KOETE導入後)
+                </div>
+                <div class="list-item">
+                    <div class="list-icon"><i class="fas fa-check"></i></div>
+                    <div class="list-text">日報（○△×の3段階評価＋一言）をプッシュ通知で自動収集</div>
+                </div>
+                <div class="list-item">
+                    <div class="list-icon"><i class="fas fa-check"></i></div>
+                    <div class="list-text">AIエージェントに「何曜日の来客が多いか」を聞くだけで集計完了</div>
+                </div>
+                <div class="list-item">
+                    <div class="list-icon"><i class="fas fa-check"></i></div>
+                    <div class="list-text">来客数のアベレージから最適な出勤ボリュームを算出→人件費削減</div>
+                </div>
+                <div class="list-item">
+                    <div class="list-icon"><i class="fas fa-check"></i></div>
+                    <div class="list-text">「このブランドが強い」「この時期はこのカテゴリー」の仕入れ判断をデータで裏付け</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
