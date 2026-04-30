@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOETE × Daruma Express 営業資料</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #111; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+        #controls {
+            width: 100%;
+            background: #1a1a1a;
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            position: fixed;
+            top: 0;
+            z-index: 100;
+            border-bottom: 2px solid #E60012;
+        }
+        #controls button {
+            background: #E60012;
+            color: #fff;
+            border: none;
+            padding: 8px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        #controls button:hover { background: #c0000f; }
+        #controls button:disabled { background: #555; cursor: default; }
+        #page-info { color: #fff; font-size: 16px; min-width: 80px; text-align: center; }
+        #slide-frame {
+            margin-top: 60px;
+            width: 1280px;
+            height: 720px;
+            border: none;
+            transform-origin: top center;
+            display: block;
+        }
+        #thumbnails {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            padding: 16px;
+            margin-top: 8px;
+        }
+        .thumb {
+            width: 120px;
+            height: 68px;
+            border: 2px solid #444;
+            cursor: pointer;
+            overflow: hidden;
+            background: #222;
+            position: relative;
+        }
+        .thumb:hover, .thumb.active { border-color: #E60012; }
+        .thumb iframe {
+            width: 1280px;
+            height: 720px;
+            transform: scale(0.09375);
+            transform-origin: top left;
+            pointer-events: none;
+        }
+        .thumb-num {
+            position: absolute;
+            bottom: 2px;
+            right: 4px;
+            color: #fff;
+            font-size: 10px;
+            background: rgba(0,0,0,0.6);
+            padding: 1px 4px;
+            border-radius: 2px;
+        }
+        @media (max-width: 1300px) {
+            #slide-frame {
+                width: 100vw;
+                height: calc(100vw * 720 / 1280);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="controls">
+        <button id="prev-btn" onclick="changePage(-1)">&#9664; 前へ</button>
+        <span id="page-info">1 / 13</span>
+        <button id="next-btn" onclick="changePage(1)">次へ &#9654;</button>
+    </div>
+    <iframe id="slide-frame" src="slide_1.html" scrolling="no"></iframe>
+    <div id="thumbnails"></div>
+
+    <script>
+        const TOTAL = 13;
+        let current = 1;
+
+        const frame = document.getElementById('slide-frame');
+        const info = document.getElementById('page-info');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const thumbsContainer = document.getElementById('thumbnails');
+
+        // スケール調整
+        function scaleFrame() {
+            const vw = window.innerWidth;
+            if (vw < 1300) {
+                const scale = vw / 1280;
+                frame.style.transform = `scale(${scale})`;
+                frame.style.marginTop = `${60 + (720 * scale - 720) / 2}px`;
+            } else {
+                frame.style.transform = '';
+            }
+        }
+        window.addEventListener('resize', scaleFrame);
+        scaleFrame();
+
+        // サムネイル生成
+        for (let i = 1; i <= TOTAL; i++) {
+            const div = document.createElement('div');
+            div.className = 'thumb' + (i === 1 ? ' active' : '');
+            div.onclick = () => goTo(i);
+            const iframe = document.createElement('iframe');
+            iframe.src = `slide_${i}.html`;
+            iframe.scrolling = 'no';
+            const num = document.createElement('div');
+            num.className = 'thumb-num';
+            num.textContent = i;
+            div.appendChild(iframe);
+            div.appendChild(num);
+            thumbsContainer.appendChild(div);
+        }
+
+        function goTo(n) {
+            current = n;
+            frame.src = `slide_${n}.html`;
+            info.textContent = `${n} / ${TOTAL}`;
+            prevBtn.disabled = n === 1;
+            nextBtn.disabled = n === TOTAL;
+            document.querySelectorAll('.thumb').forEach((t, i) => {
+                t.classList.toggle('active', i + 1 === n);
+            });
+        }
+
+        function changePage(dir) {
+            const next = current + dir;
+            if (next >= 1 && next <= TOTAL) goTo(next);
+        }
+
+        // キーボード操作
+        document.addEventListener('keydown', e => {
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') changePage(1);
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') changePage(-1);
+        });
+
+        goTo(1);
+    </script>
+</body>
+</html>
