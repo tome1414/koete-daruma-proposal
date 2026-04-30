@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #FFFFFF; color: #333333; }
+        .slide-container { 
+            width: 1280px; 
+            min-height: 720px; 
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            padding: 80px 60px;
+            display: flex;
+            flex-direction: column;
+        }
+        .red-line {
+            width: 120px;
+            height: 8px;
+            background-color: #E60012;
+            margin-bottom: 40px;
+        }
+        .main-title {
+            font-weight: 900;
+            font-size: 48px;
+            color: #1A1A1A;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+        .sub-title {
+            font-weight: 900;
+            font-size: 24px;
+            color: #E60012;
+            margin-bottom: 40px;
+            line-height: 1.4;
+        }
+        /* Use a two-column grid to reduce vertical space */
+        .issues-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px 20px; /* smaller vertical gap */
+            flex-grow: 1;
+        }
+        .issue-item {
+            display: flex;
+            background-color: #F5F5F5;
+            border-left: 6px solid #E60012; /* slightly thinner */
+            padding: 12px 18px; /* reduced inner padding */
+            align-items: center;
+        }
+        .issue-no {
+            font-weight: 900;
+            font-size: 32px;
+            color: #E60012;
+            width: 60px; /* narrower */
+            flex-shrink: 0;
+        }
+        .issue-content {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            flex-grow: 1;
+        }
+        .issue-title {
+            font-weight: 900;
+            font-size: 24px;
+            color: #1A1A1A;
+        }
+        .issue-desc {
+            font-weight: 400;
+            font-size: 18px;
+            color: #666666;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="red-line"></div>
+        <h1 class="main-title">Daruma Expressが直面する5つの課題</h1>
+        <h2 class="sub-title">多国籍・多店舗運営が生む5つの情報断絶</h2>
+        
+        <div class="issues-list">
+            <div class="issue-item">
+                <div class="issue-no">01</div>
+                <div class="issue-content">
+                    <div class="issue-title">言語の壁で現場の声が届かない</div>
+                    <div class="issue-desc">タイ人・ミャンマー人スタッフが日本語で報告できず、改善提案が埋もれる</div>
+                </div>
+            </div>
+            <div class="issue-item">
+                <div class="issue-no">02</div>
+                <div class="issue-content">
+                    <div class="issue-title">LINEに情報が分散・流失</div>
+                    <div class="issue-desc">1日4,000件超のLINEメッセージ。重要連絡と雑談が同列に流れる</div>
+                </div>
+            </div>
+            <div class="issue-item">
+                <div class="issue-no">03</div>
+                <div class="issue-content">
+                    <div class="issue-title">売上・来客データが属人化</div>
+                    <div class="issue-desc">各店舗の日報・売上データが口頭やLINEに散在し、経営判断に使えない</div>
+                </div>
+            </div>
+            <div class="issue-item">
+                <div class="issue-no">04</div>
+                <div class="issue-content">
+                    <div class="issue-title">多店舗間の情報共有が機能しない</div>
+                    <div class="issue-desc">5店舗以上を抱えるが、店舗間のベストプラクティス共有がない</div>
+                </div>
+            </div>
+            <div class="issue-item">
+                <div class="issue-no">05</div>
+                <div class="issue-content">
+                    <div class="issue-title">スタッフの本音・改善提案が抽出できない</div>
+                    <div class="issue-desc">「言いにくい文化」と言語の壁で、現場の重要な気づきが消える</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
